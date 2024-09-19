@@ -205,26 +205,33 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 
-			 function toggleDetails(detailId, element) {
+function toggleDetails(detailId, element) {
     const details = document.getElementById(detailId);
     const hint = element.querySelector('.click-hint');
-    
+
     // Hide all details and show all hints first
     const allDetails = document.querySelectorAll('.job-details');
     const allHints = document.querySelectorAll('.click-hint');
-    
+    const allJobs = document.querySelectorAll('.job-nav li'); // Select all job titles
+
     allDetails.forEach(function(detail) {
         detail.style.display = 'none'; // Hide all details
     });
-    
+
     allHints.forEach(function(hint) {
         hint.style.display = 'block'; // Show all hints
+    });
+
+    // Remove active class from all job titles
+    allJobs.forEach(function(job) {
+        job.classList.remove('active'); // Remove active class from all
     });
 
     // Check if the clicked detail is already visible
     if (details.style.display !== "block") {
         details.style.display = "block"; // Show the clicked detail
         hint.style.display = "none"; // Hide the hint for the clicked item
+        element.classList.add('active'); // Add active class to the clicked job
     }
 }
 
