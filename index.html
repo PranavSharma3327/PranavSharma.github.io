@@ -6,6 +6,8 @@
 -->
 <html>
 	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 		<title>Portfolio-Pranav Sharma</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -19,10 +21,11 @@
 
 				<!-- Nav -->
 					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>About Me</span></a>
-						<a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
+						<a href="#" class="icon solid fa-home"><span>About Me</span></a>						<a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
 						<a href="#work" class="icon solid fa-briefcase"><span>Work</span></a>
 						<a href="#projects" class="icon solid fa-folder"><span>Projects</span></a>
+						<a href="#certificates" class="icon solid fa-certificate"><span>Licenses and Certificates</span></a> <!-- Add this line -->
+
 					</nav>
 
 				<!-- Main -->
@@ -56,6 +59,8 @@
 							<a href="#education" class="arrow icon solid fa-chevron-right"></a>
 						</article>
 						
+
+
 
 							<!-- Education -->
 							<article id="education" class="panel">
@@ -145,10 +150,11 @@
 
 							<article id="projects" class="panel">
 								<div class="arrow-container">
+									<a href="#work" class="arrow icon solid fa-chevron-left"></a>
 									<header>
 										<h2>Projects</h2>
 									</header>
-									<a href="#work" class="arrow icon solid fa-chevron-left"></a>
+									<a href="#certificates" class="arrow icon solid fa-chevron-right"></a>
 
 								</div>
 
@@ -191,11 +197,70 @@
 									</div>
 								</section>
 							</article>
-							
+						<!-- Licenses and Certificates -->
+<article id="certificates" class="panel">
+    <div class="arrow-container">
+        <header>
+            <h2>Licenses and Certificates</h2>
+        </header>
+        <a href="#projects" class="arrow icon solid fa-chevron-left"></a>
+    </div>
+
+    <div class="certificate-grid">
+		<div class="certificate-box" onclick="openModal('images/AWS_license.jpeg')">
+            <img src="images/AWS_license.jpeg" alt="AWS license" />
+			<span class="cert-title">AWS Certified Cloud Practitioner</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/AWS_certificate.jpeg')">
+            <img src="images/AWS_certificate.jpeg" alt="AWS Certificate" />
+			<span class="cert-title">AWS Certified Cloud Practitioner Essentials</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/Data_Visualization.jpeg')">
+            <img src="images/Data_Visualization.jpeg" alt="Data Visualization Certificate" />
+			<span class="cert-title">Data Visualization</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/Digital_Analytics.jpeg')">
+            <img src="images/Digital_Analytics.jpeg" alt="Digital Analytics Certificate" />
+			<span class="cert-title">Digital Analytics</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/Python.jpeg')">
+            <img src="images/Python.jpeg" alt="Python Certificate" />
+			<span class="cert-title">Python</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/Java.jpeg')">
+            <img src="images/Java.jpeg" alt="Java Certificate" />
+			<span class="cert-title">Basics of Java</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/SAP_ABAP.jpeg')">
+            <img src="images/SAP_ABAP.jpeg" alt="SAP ABAP Certificate" />
+			<span class="cert-title">SAP ABAP</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/SQL_DataAnalysis.jpeg')">
+            <img src="images/SQL_DataAnalysis.jpeg" alt="SQL Data Analysis Certificate" />
+			<span class="cert-title">SQL Data Analysis</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/R.jpeg')">
+            <img src="images/R.jpeg" alt="R Certificate" />
+			<span class="cert-title">R</span>
+        </div>
+        <div class="certificate-box" onclick="openModal('images/Cyber_Security.jpeg')">
+            <img src="images/Cyber_Security.jpeg" alt="Cyber Security Certificate" />
+			<span class="cert-title">Cyber Security</span>
+        </div>
+    </div>
+</article>
+
+<!-- Modal for displaying larger image -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
 
 
 
 			</div>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -236,6 +301,7 @@ function toggleDetails(detailId, element) {
 }
 
 
+
 function toggleProjectDetails(detailId, projectElement) {
     const details = document.getElementById(detailId);
     const isVisible = details.style.display === "block";
@@ -269,6 +335,20 @@ function toggleProjectDetails(detailId, projectElement) {
 
 
 			</script>
+			<script>
+				function openModal(imageSrc) {
+					const modal = document.getElementById("imageModal");
+					const modalImage = document.getElementById("modalImage");
+					
+					modal.style.display = "block";
+					modalImage.src = imageSrc;
+				}
+				
+				function closeModal() {
+					const modal = document.getElementById("imageModal");
+					modal.style.display = "none";
+				}
+				</script>
 
 			
 				
