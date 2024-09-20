@@ -33,275 +33,6 @@ body {
 	line-height: 1;
 }
 
-/* Education Section Styles */
-
-.education-title {
-    text-align: center; /* Center the title */
-    margin-bottom: 20px; /* Space below the title */
-}
-
-.education-container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    justify-content: space-around; /* Distributes space around the boxes */
-    gap: 20px; /* Space between boxes */
-}
-
-.education-box {
-    flex: 1; /* Equal width for each box */
-    border: 1px solid #ccc; /* Add a border for visibility */
-    padding: 20px; /* Add some padding */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-}
-
-.education-box h3 {
-    margin-top: 0; /* Remove default margin from heading */
-}
-
-.job-nav {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    display: flex; /* Use flexbox for horizontal layout */
-    margin-bottom: 20px; /* Space below navigation */
-}
-
-.job-nav li {
-    margin-right: 20px; /* Space between items */
-    cursor: pointer; /* Change cursor to pointer */
-    padding: 10px 15px; /* Padding inside each item */
-    border: 1px solid #ccc; /* Border for each nav item */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background */
-    transition: background-color 0.3s; /* Smooth background change */
-}
-.job-nav li.active {
-    background-color: #d1e7dd; /* Light green background for active item */
-    font-weight: bold; /* Bold text for emphasis */
-    border-color: #0f5132; /* Darker border for active item */
-}
-
-
-.job-nav li:hover {
-    background-color: #e9ecef; /* Change background on hover */
-}
-
-.job-details {
-    display: none; /* Hidden by default */
-    padding: 15px; /* Padding for details */
-    border-top: 1px solid #ccc; /* Border at the top */
-    margin-top: 10px; /* Space above details */
-    background-color: #f0f0f0; /* Background color for details */
-}
-
-.project-nav {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    display: flex; /* Use flexbox for horizontal layout */
-    margin-bottom: 20px; /* Space below navigation */
-}
-
-.project-nav li {
-    margin-right: 20px; /* Space between items */
-    cursor: pointer; /* Change cursor to pointer */
-    padding: 10px 15px; /* Padding inside each item */
-    border: 1px solid #ccc; /* Border for each nav item */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background */
-    transition: background-color 0.3s; /* Smooth background change */
-}
-
-.project-nav li:hover {
-    background-color: #e9ecef; /* Change background on hover */
-}
-
-.project-nav li.active {
-    background-color: #d1e7dd; /* Light green background for active item */
-    font-weight: bold; /* Bold text for emphasis */
-    border-color: #0f5132; /* Darker border for active item */
-}
-
-.project-details {
-    display: none; /* Hidden by default */
-    padding: 15px; /* Padding for details */
-    border-top: 1px solid #ccc; /* Border at the top */
-    margin-top: 10px; /* Space above details */
-    background-color: #f0f0f0; /* Background color for details */
-}
-
-.click-hint {
-    display: block; /* Make it a block element */
-    font-size: 0.9em; /* Smaller font size */
-    color: #888; /* Gray color for the hint */
-    margin-top: 5px; /* Space above the hint */
-    opacity: 0.8; /* Slight transparency */
-}
-
-.arrow-container {
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: space-between; /* Space between arrows and header */
-    position: relative; /* Allow absolute positioning for arrows */
-    margin-bottom: 20px; /* Space below the container */
-}
-
-.arrow {
-    position: relative; /* Keep arrows in the flow of the layout */
-    width: 2.75em;
-    height: 2.75em;
-    background: rgba(0, 0, 0, 0.75);
-    color: #ffffff;
-    text-align: center;
-    line-height: 2.75em;
-    font-size: 1.5em;
-    z-index: 1;
-}
-
-/* Optional: Add hover effect for arrows */
-.arrow:hover {
-    background: rgba(0, 0, 0, 0.9); /* Darken on hover */
-}
-
-.button-container {
-    text-align: center; /* Center the button */
-    margin-top: 20px; /* Space below the button */
-}
-
-.view-resume-button {
-    display: inline-block; /* Make it a block element */
-    padding: 10px 20px; /* Add some padding */
-    background-color: rgba(0, 0, 0, 0.75); /* Use the rgba color */
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Transition for hover effect */
-}
-
-.view-resume-button:hover {
-    background-color: rgba(0, 0, 0, 1); /* Darker on hover */
-}
-
-.intro {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between text and image */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    padding: 20px; /* Add padding around the content */
-}
-
-.text-container {
-    flex: 0 0 60%; /* Set width to 60% */
-    max-width: 60%; /* Ensure it doesn't exceed 60% */
-}
-
-.image-container {
-    flex: 0 0 40%; /* Set width to 40% */
-    max-width: 40%; /* Ensure it doesn't exceed 40% */
-    margin-left: 20px; /* Space between text and image */
-    border: 2px solid #ccc; /* Border for the image box */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow */
-}
-
-.image-container img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove bottom space */
-}
-
-@media (max-width: 768px) {
-    .intro {
-        flex-direction: column; /* Stack items on smaller screens */
-        align-items: center; /* Center items horizontally */
-    }
-
-    .text-container {
-        max-width: 100%; /* Full width for text on small screens */
-        margin-bottom: 20px; /* Space below text */
-    }
-
-    .image-container {
-        max-width: 100%; /* Full width for image on small screens */
-        margin-left: 0; /* Remove margin on small screens */
-    }
-}
-p {
-    text-align: justify;
-}
-
-.certificate-grid {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 10px; /* Space between grid items */
-}
-
-.certificate-box {
-    position: relative;
-    overflow: hidden; /* Ensure overflow is hidden for scaling */
-}
-
-.certificate-box img {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    opacity: 0.7; /* Reduce visibility */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both properties */
-}
-
-.certificate-box:hover img {
-    opacity: 1; /* Full visibility on hover */
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-}
-
-.cert-title {
-    position: absolute;
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Cover full width */
-    height: 100%; /* Cover full height */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white; /* Text color */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    font-size: 16px; /* Adjust font size */
-    padding: 10px; /* Add padding around the text */
-    box-sizing: border-box; /* Include padding in total width and height */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-}
-
-.certificate-box:hover .cert-title {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
-}
-
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%; /* Adjust this to your preference */
-    max-width: 700px; /* Maximum width */
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
 
 /* Basic */
 
@@ -969,3 +700,273 @@ p {
 
 				}
 
+/* Education Section Styles */
+
+.education-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.education-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-around; /* Distributes space around the boxes */
+    gap: 20px; /* Space between boxes */
+}
+
+.education-box {
+    flex: 1; /* Equal width for each box */
+    border: 1px solid #ccc; /* Add a border for visibility */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.education-box h3 {
+    margin-top: 0; /* Remove default margin from heading */
+}
+
+.job-nav {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    margin-bottom: 20px; /* Space below navigation */
+}
+
+.job-nav li {
+    margin-right: 20px; /* Space between items */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 10px 15px; /* Padding inside each item */
+    border: 1px solid #ccc; /* Border for each nav item */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+.job-nav li.active {
+    background-color: #d1e7dd; /* Light green background for active item */
+    font-weight: bold; /* Bold text for emphasis */
+    border-color: #0f5132; /* Darker border for active item */
+}
+
+
+.job-nav li:hover {
+    background-color: #e9ecef; /* Change background on hover */
+}
+
+.job-details {
+    display: none; /* Hidden by default */
+    padding: 15px; /* Padding for details */
+    border-top: 1px solid #ccc; /* Border at the top */
+    margin-top: 10px; /* Space above details */
+    background-color: #f0f0f0; /* Background color for details */
+}
+
+.project-nav {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    margin-bottom: 20px; /* Space below navigation */
+}
+
+.project-nav li {
+    margin-right: 20px; /* Space between items */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 10px 15px; /* Padding inside each item */
+    border: 1px solid #ccc; /* Border for each nav item */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.project-nav li:hover {
+    background-color: #e9ecef; /* Change background on hover */
+}
+
+.project-nav li.active {
+    background-color: #d1e7dd; /* Light green background for active item */
+    font-weight: bold; /* Bold text for emphasis */
+    border-color: #0f5132; /* Darker border for active item */
+}
+
+.project-details {
+    display: none; /* Hidden by default */
+    padding: 15px; /* Padding for details */
+    border-top: 1px solid #ccc; /* Border at the top */
+    margin-top: 10px; /* Space above details */
+    background-color: #f0f0f0; /* Background color for details */
+}
+
+.click-hint {
+    display: block; /* Make it a block element */
+    font-size: 0.9em; /* Smaller font size */
+    color: #888; /* Gray color for the hint */
+    margin-top: 5px; /* Space above the hint */
+    opacity: 0.8; /* Slight transparency */
+}
+
+.arrow-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between arrows and header */
+    position: relative; /* Allow absolute positioning for arrows */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.arrow {
+    position: relative; /* Keep arrows in the flow of the layout */
+    width: 2.75em;
+    height: 2.75em;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    text-align: center;
+    line-height: 2.75em;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+/* Optional: Add hover effect for arrows */
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.9); /* Darken on hover */
+}
+
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Space below the button */
+}
+
+.view-resume-button {
+    display: inline-block; /* Make it a block element */
+    padding: 10px 20px; /* Add some padding */
+    background-color: rgba(0, 0, 0, 0.75); /* Use the rgba color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.view-resume-button:hover {
+    background-color: rgba(0, 0, 0, 1); /* Darker on hover */
+}
+
+.intro {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 20px; /* Add padding around the content */
+}
+
+.text-container {
+    flex: 0 0 60%; /* Set width to 60% */
+    max-width: 60%; /* Ensure it doesn't exceed 60% */
+}
+
+.image-container {
+    flex: 0 0 40%; /* Set width to 40% */
+    max-width: 40%; /* Ensure it doesn't exceed 40% */
+    margin-left: 20px; /* Space between text and image */
+    border: 2px solid #ccc; /* Border for the image box */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+}
+
+.image-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .text-container {
+        max-width: 100%; /* Full width for text on small screens */
+        margin-bottom: 20px; /* Space below text */
+    }
+
+    .image-container {
+        max-width: 100%; /* Full width for image on small screens */
+        margin-left: 0; /* Remove margin on small screens */
+    }
+}
+p {
+    text-align: justify;
+}
+
+.certificate-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Space between grid items */
+}
+
+
+.certificate-box {
+    position: relative;
+    overflow: hidden; 
+}
+
+.certificate-box img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.7; /* Reduce visibility */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both properties */
+}
+
+.certificate-box:hover img {
+    opacity: 1; /* Full visibility on hover */
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.cert-title {
+    position: absolute;
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover full width */
+    height: 100%; /* Cover full height */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    font-size: 16px; /* Adjust font size */
+    padding: 10px; /* Add padding around the text */
+    box-sizing: border-box; /* Include padding in total width and height */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.certificate-box:hover .cert-title {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Adjust this to your preference */
+    max-width: 700px; /* Maximum width */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
